@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Weather App</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="font" href="font/weathericons-regular-webfont.svg">
+  <link rel="icon" type="image/png" href="http://www.iconsfind.com/wp-content/uploads/2015/11/20151129_565a5f240abc6-210x210.png" />
+</head>
+<body>
+
+	<h1>
+  The weather in 
+
+  <select id="city">
+    
+    <option value="5368361" selected>Los Angeles</option>
+    <option value="2643743">London</option>
+    <option value="7839805">Melbourne</option>
+    <option value="6447142">Marseille</option>
+    <option value="5128581">New York</option>
+    <option value="2968815">Paris</option>
+    <option value="1688385">Santa Barbara</option>
+  </select>
+  
+  is: 
+  <br>
+  temp - <span id="response"></span>
+  <br>
+  weather icon:
+  <br>
+  <i class="wi-strong-wind"></i>
+</h1>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="main.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
