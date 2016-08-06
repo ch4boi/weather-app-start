@@ -24,24 +24,44 @@
 						"cod":200}
 */
 
-
 var app = { };
 
 app.getWeather = function(){
 	var cityId = $( this ).val();
 		$.ajax({
 			url: 'http://api.openweathermap.org/data/2.5/weather?id=' + cityId + '&appid=40a5206a53074b4971878061041235ca',
-			success: function( response ){
-				var temp = (Math.floor(response.main.temp - 273.15)*9/5)+32 ; 
-				var sky = response.weather[0].description ;
-				var wind = response.wind.speed ;
-				$( '#response' ).text( '°' + temp + ' ' + 'and ' +  '  ' + sky + '  ' + 'wind speed = ' + wind);
-				/* $( '#response' ).text( sky ); */
+			success: function( weatherAPI ){
+				var temp = Math.floor((weatherAPI.main.temp - 273.15)*9/5)+32 ; 
+				var sky = weatherAPI.weather[0].description ;
+				var wind = weatherAPI.wind.speed ;
+				$( '#temp' ).text( temp + '°' );
+				$( '#sky' ).text( sky );
+				$( '#wind' ).text( 'wind speed = ' + Math.ceil(wind) + 'mph');
 		}
 	});
 };
 
-/* 
+
+/*
+app.getTime = function(){
+    var cityTime = $( this ).val();
+        $.ajax({
+           success: function( city ){
+            var LGW = now() + 0;
+            var CDG = now() + 1;
+            var LAX = now() + 2;
+            var MEL = now() + 3;
+            var SFO = now() + 4;
+            var SBA = now() + 5;
+            $( '#cityTime' ).text( SBA );
+    }
+    }
+}
+*/
+
+/*
+                var time = getTime();
+                $( '#cityTime' ).text( time );
 	- look up all weather.descriptions 
 	- if else statement could match each description with an apropriate weather icon
 */
@@ -56,6 +76,37 @@ $( document ).ready( app.init );
 
 
 
+/*
+
+    if (countryCode === 'AU') {
+        $('#page2').css('background-image', 'url(https://c2.staticflickr.com/8/7563/15467644144_44da4dd226_h.jpg)');
+        $('select').val('AU');
+    } else if (countryCode === 'CA') {
+        $('#page2').css('background-image', 'url(https://c2.staticflickr.com/8/7507/15470276073_51cca144e2_h.jpg)');
+    }
+    else if (countryCode === 'FR') {
+        $('#page2').css('background-image', 'url(https://c4.staticflickr.com/8/7570/15470275483_961ba05ce4_b.jpg)');
+    }
+    else if (countryCode === 'DE') {
+        $('#page2').css('background-image', 'url(https://c2.staticflickr.com/8/7494/15903864429_4e60194665_k.jpg)');
+    }
+    else if (countryCode === 'IT') {
+        $('#page2').css('background-image', 'url(https://c2.staticflickr.com/8/7495/15902674050_becfecf552_h.jpg)');
+    }
+    else if (countryCode === 'ES') {
+        $('#page2').css('background-image', 'url(https://c4.staticflickr.com/8/7583/15903854449_eb2c8c6ea9_h.jpg)');
+    }
+    else if (countryCode === 'UK') {
+        $('#page2').css('background-image', 'url(https://c2.staticflickr.com/8/7461/15902512388_cafe943334_h.jpg)');
+    }
+    else if (countryCode === 'US') {
+        $('#page2').css('background-image', 'url(https://c1.staticflickr.com/9/8592/16089961865_7f573696e8_k.jpg)');
+    }
+   else {
+        $('#page2').css('background-image', 'url(https://c1.staticflickr.com/9/8581/16089246042_2c187e4d7f_h.jpg)');
+    }
+}
+*/
 
 
 

@@ -9,31 +9,50 @@
 </head>
 <body>
 
-	<h1>
-  The weather in 
 
-  <select id="city">
-    
-    <option value="5368361" selected>Los Angeles</option>
-    <option value="2643743">London</option>
-    <option value="7839805">Melbourne</option>
-    <option value="6447142">Marseille</option>
-    <option value="5128581">New York</option>
-    <option value="2968815">Paris</option>
-    <option value="1688385">Santa Barbara</option>
-  </select>
+	<h1 class="selector">
+      In :
+
+      <select id="city">
+        <option value="5368361" selected>Los Angeles</option>
+        <option value="2643743" >London</option>
+        <option value="7839805">Melbourne</option>
+        <option value="6447142">Marseille</option>
+        <option value="5128581">New York</option>
+        <option value="2968815">Paris</option>
+        <option value="1688385">Santa Barbara</option>
+      </select>
+
+      it is 
+
+      <div id="cityTime">[add time here]</div>
+  </h1>
+
+<div class="bigs">
+  <div id="left">
+  <img id="skyIcon" src="images/partlyCloudy.png">
+  <div id="icon"></div>
+  </div>
+  <div id="temp"></div>
+</div>
+
+  <div id="sky"></div>
+
+  <div id="wind"></div>
   
-  is: 
+
   <br>
-  temp - <span id="response"></span>
-  <br>
-  weather icon:
-  <br>
+  
   <i class="wi-strong-wind"></i>
-</h1>
 
+<!-- greeting script -->
+  <script src="js/ add-content.js"></script>
 
+<!-- weather api script -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- add particle script ? ? ? -->
+
 	<script src="main.js" type="text/javascript" charset="utf-8"></script>
 
 </body>

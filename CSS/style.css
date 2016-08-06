@@ -1,5 +1,72 @@
+* {
+	font-family: sans-serif;
+	font-weight: 100;
+	background-color: #B3D4FF;
+}
+ 
 select {
   padding:0.25em 0.25em;
   font:inherit;
   -webkit-appearance:none;
+}
+
+#city {
+	display: inline-block;
+}
+
+.selector {
+	width: 50%;
+	display: inline-block;
+}
+
+
+#cityTime {
+	font-weight: 500;
+	display: inline-block;
+}
+
+.amPm {
+	display: inline-block;
+	font-weight: 500;
+}
+
+.bigs{
+	margin-top: 40px;
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+#left{
+	width: 25%;
+	display: inline-block;
+}
+
+#skyIcon {
+	width: 150px;
+	display: inline-block;
+}
+
+#temp {
+	color: white;
+	font-size: 8em;
+	font-weight: 500;
+	width: 25%;
+	text-align: center;
+	vertical-align: center;
+	display: inline-block;
+}
+
+#sky {
+	color: white;
+	text-align: center;
+	font-size: 5em;
+	letter-spacing: 5px;
+}
+
+#wind {
+	color: white;
+	text-align: center;
+	font-size: 2em;
+	margin-top: 15px;
 }
