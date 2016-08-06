@@ -42,29 +42,20 @@ app.getWeather = function(){
 };
 
 
-/*
-app.getTime = function(){
-    var cityTime = $( this ).val();
-        $.ajax({
-           success: function( city ){
-            var LGW = now() + 0;
-            var CDG = now() + 1;
-            var LAX = now() + 2;
-            var MEL = now() + 3;
-            var SFO = now() + 4;
-            var SBA = now() + 5;
-            $( '#cityTime' ).text( SBA );
-    }
-    }
-}
-*/
+/*  BUG #1
 
-/*
+    Would like to add in the current time for selected city...but ran into confutsion
+
                 var time = getTime();
                 $( '#cityTime' ).text( time );
-	- look up all weather.descriptions 
-	- if else statement could match each description with an apropriate weather icon
 */
+
+/*  BUG #2
+
+    Would like to match each 'sky' description with an apropriate weather icon
+    ...and add that icon to the display
+*/
+
 
 app.init = function(){
   $( '#city' ).on( 'change', app.getWeather ).trigger( 'change' );
@@ -74,9 +65,9 @@ app.init = function(){
 $( document ).ready( app.init );
 
 
-
-
 /*
+
+Another design included background images of the selected city...
 
     if (countryCode === 'AU') {
         $('#page2').css('background-image', 'url(https://c2.staticflickr.com/8/7563/15467644144_44da4dd226_h.jpg)');
