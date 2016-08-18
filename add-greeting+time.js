@@ -1,7 +1,7 @@
 
-
-// adds in a greeting message based on time of day
-// possibly adapt time of day to selected time zone tooooo ??  
+/* Thi s script displays a greeting to the user based upon the current time. 
+	It is an example from JavaScript &jQuery book */
+// Would also like it to adapt time of day to selected time zone tooooo ??  
 	// if so, include local time still visible in mini time display
 	// if weather set to local time, remove the mini display
 var today= new Date();

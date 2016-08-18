@@ -3,7 +3,7 @@
 	font-weight: 100;
 	background-color: #B3D4FF;
 }
- 
+
 select {
   padding:0.25em 0.25em;
   font:inherit;
@@ -17,12 +17,11 @@ select {
 .selector {
 	width: 50%;
 	display: inline-block;
+	font-size: 1em;
 }
 
-
-#cityTime {
-	font-weight: 500;
-	display: inline-block;
+#dt {
+	font-size: 1em;
 }
 
 .amPm {
@@ -33,17 +32,17 @@ select {
 .bigs{
 	margin-top: 40px;
 	width: 100%;
+	display: inline-block;
+}
+
+.description {
+	color: white;
+	font-size: 7em;
+	font-weight: 500;
+	width: 20%;
 	text-align: center;
-	display: inline-block;
-}
-
-#left{
-	width: 25%;
-	display: inline-block;
-}
-
-#skyIcon {
-	width: 150px;
+	margin-top: 30px;
+	margin-left: 30%;
 	display: inline-block;
 }
 
@@ -51,9 +50,9 @@ select {
 	color: white;
 	font-size: 8em;
 	font-weight: 500;
-	width: 25%;
+	width: 20%;
 	text-align: center;
-	vertical-align: center;
+	vertical-align: top;
 	display: inline-block;
 }
 
@@ -70,3 +69,34 @@ select {
 	font-size: 2em;
 	margin-top: 15px;
 }
+
+#minMaxTemps {
+	width: 100%;
+	height: 150px;
+	margin-top: 50px;
+	display: inline-block;
+}
+
+#tempMin{
+	width: 49.75%;
+	height: 150px;
+	display: inline-block;
+	background-color: blue;
+	opacity: .1;
+	z-index: 1;
+}
+
+#tempMax{
+	width: 49.75%;
+	height: 150px;
+	display: inline-block;
+	background-color: orange;
+	margin-left: -.5%;
+	opacity: .1;
+	z-index: 1;
+}
+
+
+
+
+
